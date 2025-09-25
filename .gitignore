@@ -1,0 +1,49 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build directories
+target/
+build/
+dist/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Package lock files (keep package.json but ignore lock files for now)
+package-lock.json
+yarn.lock
+
+# Java compiled files
+*.class
+
+# Maven
+target/
+
+# Compiled static files
+*.css.map
+*.js.map
