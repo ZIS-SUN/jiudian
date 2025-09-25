@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(md backend)",
+      "Bash(md frontend)",
+      "Bash(md docs)",
+      "Bash(java:*)",
+      "Bash(mvn clean:*)",
+      "Bash(mvn:*)",
+      "Bash(powershell:*)",
+      "Bash(cmd /c:*)",
+      "Bash(net start:*)",
+      "Bash(chmod:*)",
+      "Bash(curl:*)",
+      "Bash(find:*)",
+      "Bash(dir:*)"
+    ],
+    "deny": []
+  }
+}

@@ -1,0 +1,43 @@
+server:
+  port: 8089
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: hotel-management
+  
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hotel_management?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:1234}
+    
+# 移除JPA配置，使用MyBatis Plus
+  # jpa:
+  #   hibernate:
+  #     ddl-auto: update
+  #   show-sql: true
+    
+# MyBatis Plus 配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+      
+# JWT 配置
+jwt:
+  secret: ${JWT_SECRET:hotel-management-secret-key-2024}
+  expiration: 86400000 # 24小时
+
+# 日志配置
+logging:
+  level:
+    com.hotel: debug
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
